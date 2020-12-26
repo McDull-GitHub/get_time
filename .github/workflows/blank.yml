@@ -17,7 +17,7 @@ jobs:
     - name: Tag
       run: |
         git tag "v$env:GitVersion_SemVer"
-        git push origin "v$env:GitVersion_SemVer"
+        git push origin "v${{ env.GitVersion_SemVer }}"
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
