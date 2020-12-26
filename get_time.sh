@@ -7,4 +7,4 @@ git add ver
 git commit -m ${time}
 #git tag v${time}
 #git push origin --tags
-git push
+# git push
