@@ -22,6 +22,6 @@ get_ipfs(){
 get_ipfs
 ipfs init
 nohup ipfs daemon &
-sleep 5
+sleep 30
 ipfs get $key -o gui
 cd gui && ls -al
