@@ -15,7 +15,7 @@ jobs:
     - name: Build
       run: sh get_time.sh
     - name: num
-      run: num = "3.1.4"
+      run: num=`curl ip.sb`
 #     - name: Tag
 #       run: |
 #         git tag "v${{ env.GitVersion_SemVer }}"
