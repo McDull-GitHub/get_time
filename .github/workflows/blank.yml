@@ -36,7 +36,7 @@ jobs:
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: $num
+        automatic_release_tag: ${{ num }}
         title: "ok"
         prerelease: false
         files: |
