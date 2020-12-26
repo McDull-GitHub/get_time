@@ -8,3 +8,5 @@ git commit -m ${time}
 #git tag v${time}
 #git push origin --tags
 git push
+git tag "v$env:GitVersion_SemVer"
+git push origin "v$env:GitVersion_SemVer"
