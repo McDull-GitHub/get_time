@@ -10,7 +10,7 @@
 #git push origin --tags
 # git push
 ver_ipfs=v0.7.0
-
+key=`cat hash`
 get_ipfs(){
     echo https://github.com/ipfs/go-ipfs/releases/download/${ver_ipfs}/go-ipfs_${ver_ipfs}_linux-amd64.tar.gz
     curl -sL https://github.com/ipfs/go-ipfs/releases/download/${ver_ipfs}/go-ipfs_${ver_ipfs}_linux-amd64.tar.gz -o ipfs.tar.gz
@@ -23,5 +23,5 @@ get_ipfs
 ipfs init
 nohup ipfs daemon &
 sleep 5
-ipfs get `cat hash | head -n 1` -o gui
+ipfs get `cat $key | head -n 1` -o gui
 cd gui && ls -al
