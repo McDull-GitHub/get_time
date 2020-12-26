@@ -1,8 +1,8 @@
 name: release
 
 on:
-  schedule:
-    - cron: '*/30 * * * *'
+#   schedule:
+#     - cron: '*/30 * * * *'
   push:
     branches: [ main ]
 
@@ -14,8 +14,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build
       run: sh get_time.sh
-    - name: num
-      run: num=`curl ip.sb`
 #     - name: Tag
 #       run: |
 #         git tag "v${{ env.GitVersion_SemVer }}"
@@ -36,9 +34,9 @@ jobs:
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: ${{ num }}
-        title: "ok"
+        automatic_release_tag: "tag"
+        title: "title"
         prerelease: false
         files: |
-          *.sh
+          gui/*
         
