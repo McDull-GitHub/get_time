@@ -12,8 +12,8 @@
 ver_ipfs=v0.7.0
 
 get_ipfs(){
-    echo https://github.com/ipfs/go-ipfs/releases/download/$ver_ipfs/go-ipfs_$ver_ipfs_linux-amd64.tar.gz
-    curl -sL https://github.com/ipfs/go-ipfs/releases/download/$ver_ipfs/go-ipfs_$ver_ipfs_linux-amd64.tar.gz -o ipfs.tar.gz
+    echo https://github.com/ipfs/go-ipfs/releases/download/${ver_ipfs}/go-ipfs_${ver_ipfs}_linux-amd64.tar.gz
+    curl -sL https://github.com/ipfs/go-ipfs/releases/download/${ver_ipfs}/go-ipfs_${ver_ipfs}_linux-amd64.tar.gz -o ipfs.tar.gz
     tar -xvzf ipfs.tar.gz
     cd go-ipfs
     sudo bash install.sh
