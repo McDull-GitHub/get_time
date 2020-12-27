@@ -24,4 +24,3 @@ ipfs init
 nohup ipfs daemon &
 sleep 30
 ipfs get $key -o gui
-cd gui && ls -al
