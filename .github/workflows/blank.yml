@@ -38,5 +38,5 @@ jobs:
         title: "title"
         prerelease: false
         files: |
-          gui/*
+          gui/geph*
         
